@@ -1,0 +1,3 @@
+#!/bin/bash
+cat $1abstracts | grep -P "$2\." | sed "s/$2\.\ //g"
+

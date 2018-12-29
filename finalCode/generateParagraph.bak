@@ -1,0 +1,3 @@
+#!/bin/bash
+cat $1target.html | grep -oP "<p>.*<\/p>|<li>.*</li>|<b>.*</b>|<i>.*</i>|<h\d>.*<\/h\d>" | sed "s/<[^>]*>//g" > $1targetTXT
+

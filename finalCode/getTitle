@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $1titles| grep -oP "\[$2\].*"| grep -oP "\].*" | grep -oP "[^\]]*"

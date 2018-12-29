@@ -1,0 +1,7 @@
+#!/bin/bash
+# cat $1target.html | grep -oP "<p>.*<\/p>|<li>.*</li>|<b>.*</b>|<i>.*</i>|<h\d>.*<\/h\d>" | sed "s/<[^>]*>//g" > $1targetTXT
+lynx -dump $1target.html > $1target.temp 
+awk -v RS= '{$1=$1}1' $1target.temp > $1target.temp2 
+sed -n "/*/,/References/p" $1target.temp2 > $1target.temp3 
+sed "s/\[.*\]//g" $1target.temp3 > $1targetTXT
+

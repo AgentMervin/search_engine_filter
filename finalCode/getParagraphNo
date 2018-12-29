@@ -1,0 +1,2 @@
+#!/bin/bash
+wc -l $1targetTXT | awk '{print $1}'

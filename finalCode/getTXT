@@ -1,0 +1,2 @@
+#!/bin/bash
+links -dump $2 | grep -vP "\*\ .*"  | grep -vP "\[[^\]]*\]" > $1targetTXT

@@ -1,0 +1,2 @@
+#!/bin/bash
+cat $1links | grep -P "$2\." | sed "s/^[[:digit:]]*\.//g"
